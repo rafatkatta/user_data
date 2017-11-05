@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171031122555) do
+ActiveRecord::Schema.define(version: 20171031132053) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.string "email"
+    t.string "encrypted_password"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_accounts_on_user_id"
+  end
 
   create_table "addresses", force: :cascade do |t|
     t.string "country_code"
