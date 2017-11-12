@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-5.1.dtd">
+<!-- eric project file for project UserData -->
+<!-- Saved: 2017-11-05, 14:00:55 -->
+<!-- Copyright (C) 2017 Rafat Katta, rafatkatta@gsibc.net -->
+<Project version="5.1">
+  <Language></Language>
+  <Hash>85d13e1b725428a3befc719b38f5c53ef714e62a</Hash>
+  <ProgLanguage mixed="1">Ruby</ProgLanguage>
+  <ProjectType>Web</ProjectType>
+  <Description>simple user data web application to use a user data template for other projects</Description>
+  <Version>0.1</Version>
+  <Author>Rafat Katta</Author>
+  <Email>rafatkatta@gsibc.net</Email>
+  <Sources>
+    <Source>config/puma.rb</Source>
+    <Source>config/initializers/wrap_parameters.rb</Source>
+    <Source>config/initializers/assets.rb</Source>
+    <Source>config/initializers/backtrace_silencers.rb</Source>
+    <Source>config/initializers/mime_types.rb</Source>
+    <Source>config/initializers/cookies_serializer.rb</Source>
+    <Source>config/initializers/inflections.rb</Source>
+    <Source>config/initializers/filter_parameter_logging.rb</Source>
+    <Source>config/initializers/application_controller_renderer.rb</Source>
+    <Source>config/spring.rb</Source>
+    <Source>config/application.rb</Source>
+    <Source>config/boot.rb</Source>
+    <Source>config/environments/production.rb</Source>
+    <Source>config/environments/test.rb</Source>
+    <Source>config/environments/development.rb</Source>
+    <Source>config/routes.rb</Source>
+    <Source>config/environment.rb</Source>
+    <Source>test/application_system_test_case.rb</Source>
+    <Source>test/models/account_test.rb</Source>
+    <Source>test/models/data_type_test.rb</Source>
+    <Source>test/models/address_test.rb</Source>
+    <Source>test/models/contact_test.rb</Source>
+    <Source>test/models/user_test.rb</Source>
+    <Source>test/test_helper.rb</Source>
+    <Source>test/factories/user.rb</Source>
+    <Source>test/factories/accounts.rb</Source>
+    <Source>test/factories/address.rb</Source>
+    <Source>test/factories/contact.rb</Source>
+    <Source>test/factories/data_type.rb</Source>
+    <Source>db/schema.rb</Source>
+    <Source>db/migrate/20171031122300_create_data_types.rb</Source>
+    <Source>db/migrate/20171031132053_create_accounts.rb</Source>
+    <Source>db/migrate/20171031122555_create_contacts.rb</Source>
+    <Source>db/migrate/20171031122329_create_addresses.rb</Source>
+    <Source>db/migrate/20171031115034_create_users.rb</Source>
+    <Source>db/seeds.rb</Source>
+    <Source>app/helpers/application_helper.rb</Source>
+    <Source>app/controllers/application_controller.rb</Source>
+    <Source>app/models/user.rb</Source>
+    <Source>app/models/account.rb</Source>
+    <Source>app/models/address.rb</Source>
+    <Source>app/models/contact.rb</Source>
+    <Source>app/models/application_record.rb</Source>
+    <Source>app/models/data_type.rb</Source>
+    <Source>app/mailers/application_mailer.rb</Source>
+    <Source>app/jobs/application_job.rb</Source>
+    <Source>app/channels/application_cable/connection.rb</Source>
+    <Source>app/channels/application_cable/channel.rb</Source>
+    <Source>app/assets/config/manifest.js</Source>
+    <Source>app/assets/javascripts/application.js</Source>
+    <Source>app/assets/javascripts/cable.js</Source>
+    <Source>app/models/contact/business.rb</Source>
+    <Source>app/models/contact/private.rb</Source>
+  </Sources>
+  <Forms>
+    <Form>public/422.html</Form>
+    <Form>public/404.html</Form>
+    <Form>public/500.html</Form>
+  </Forms>
+  <Translations/>
+  <Resources/>
+  <Interfaces/>
+  <Others>
+    <Other>app/assets/stylesheets/application.css</Other>
+  </Others>
+  <Vcs>
+    <VcsType>None</VcsType>
+  </Vcs>
+  <FiletypeAssociations>
+    <FiletypeAssociation pattern="*.css" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.haml" type="FORMS"/>
+    <FiletypeAssociation pattern="*.htm" type="FORMS"/>
+    <FiletypeAssociation pattern="*.html" type="FORMS"/>
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
+    <FiletypeAssociation pattern="*.js" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.ptl" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py2" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw2" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.rb" type="SOURCES"/>
+  </FiletypeAssociations>
+</Project>
