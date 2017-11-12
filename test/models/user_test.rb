@@ -31,6 +31,17 @@ class UserTest < ActiveSupport::TestCase
     assert_raise ActiveRecord::RecordInvalid do
       user = create(:user, lastname: '')
     end
+  end
+  
+  def test_user_with_birthday
+    user = create(:user, birthday: Date.today - 20.years)
+    assert user.valid?
   end    
+  
+  def test_user_with_unvalid_birthday
+    assert_raise ActiveRecord::RecordInvalid do
+      user = create(:user, birthday: Date.today)
+    end
+  end
   
 end
