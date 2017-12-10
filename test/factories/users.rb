@@ -7,5 +7,7 @@ FactoryBot.define do
     birth_country nil
     identity_card_id nil
     tax_id nil
+    gender    
+
   end
 end

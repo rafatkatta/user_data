@@ -44,4 +44,10 @@ class UserTest < ActiveSupport::TestCase
     end
   end
   
+    def test_user_with_older_than_135
+    assert_raise ActiveRecord::RecordInvalid do
+      user = create(:user, birthday: (Date.today - 136.year ))
+    end
+  end
+  
 end

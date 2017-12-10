@@ -10,7 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171112112235) do
+ActiveRecord::Schema.define(version: 20171210104933) do
+
+  create_table "genders", force: :cascade do |t|
+    t.string "designation"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "titles", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+
+  create_table "users", force: :cascade do |t|
+    t.string "firstname"
+    t.string "lastname"
+    t.date "birthday"
+    t.string "birthplace"
+    t.string "birth_country"
+    t.string "identity_card_id"
+    t.string "tax_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "gender_id"
+    t.integer "title_id"
+    t.index ["gender_id"], name: "index_users_on_gender_id"
+    t.index ["title_id"], name: "index_users_on_title_id"
+  end
 
   create_table "accounts", force: :cascade do |t|
     t.string "email"
@@ -77,16 +106,5 @@ ActiveRecord::Schema.define(version: 20171112112235) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "firstname"
-    t.string "lastname"
-    t.date "birthday"
-    t.string "birthplace"
-    t.string "birth_country"
-    t.string "identity_card_id"
-    t.string "tax_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
 end
