@@ -3,22 +3,24 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+* Ruby version 5.1
 
-* Ruby version
+* System dependencies Linux
 
-* System dependencies
+* Configuration with sqlit3 but you can change it asyou like
 
-* Configuration
+* Database creation db:setup, db:seed
 
-* Database creation
+* Database initialization with rails
 
-* Database initialization
+* run the test suite with rail test
 
-* How to run the test suite
+* user ve some test for olds it must be littel than 135 years.
+* user validation for empty name (firstname, lastname).
+* user title optional
+* user must be ve a gender
+* address validation for country 
+* you can change the application name to use your own name
+* activeadmin davise used for administration and you can use it for other thins.
+* mygoals to use it as start application with minimal functionality,as user account with data (profile) and contact to save time 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
