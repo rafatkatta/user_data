@@ -1,0 +1,3 @@
+class GooglePlus < Contact
+
+end

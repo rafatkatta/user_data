@@ -1,0 +1,3 @@
+class Phone < Contact
+
+end

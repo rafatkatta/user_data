@@ -1,0 +1,3 @@
+class Facebook < Contact
+
+end

@@ -1,0 +1,3 @@
+class Tumblr < Contact
+
+end

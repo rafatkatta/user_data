@@ -1,0 +1,3 @@
+class Xing < Contact
+
+end

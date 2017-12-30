@@ -1,0 +1,2 @@
+class Instagram < Contact
+end
