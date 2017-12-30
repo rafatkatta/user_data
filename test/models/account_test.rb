@@ -7,17 +7,18 @@ class AccountTest < ActiveSupport::TestCase
   end
   
   def test_account_with_user
-    account = create(:account, user: @user)
-    assert account.valid?
+    assert_raise ActiveRecord::RecordInvalid do
+      account = create(:account, user: @user)
+    end  
   end
   
   def test_account_email
-  	 account = create(:account, email: 'email@mail.com', user: @user)
+  	 account = create(:account, password: 'dgsfdfd', email: 'email@mail.com', user: @user)
   	 assert account.valid?
   end
   
   def test_account_encrypted_password
-  	 account = create(:account, encrypted_password: 'ÖhhrdtfgERegffdgrdgb', user: @user)
+  	 account = create(:account, password: 'ÖhhrdtfgERegffdgrdgb', user: @user)
   	 assert account.valid?  
   end
   
