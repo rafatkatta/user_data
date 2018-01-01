@@ -1,13 +1,2 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  data: MyString
-  type: 
-  data_type: one
-  user: one
-
-two:
-  data: MyString
-  type: 
-  data_type: two
-  user: two

@@ -1,3 +1,0 @@
-class Snapchat < Contact
-
-end

@@ -1,3 +1,0 @@
-class YouTube < Contact
-
-end

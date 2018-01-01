@@ -1,3 +1,0 @@
-class Linkedin < Contact
-
-end

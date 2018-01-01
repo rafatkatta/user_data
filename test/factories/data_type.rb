@@ -1,10 +1,10 @@
 FactoryBot.define do
   factory :data_type do
     trait :private do
-      type :private
+      name :private
     end
     trait :business do
-      type :business
+      name :business
     end    
   end
 end
