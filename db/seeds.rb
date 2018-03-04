@@ -32,4 +32,4 @@ ContactType.create(name: 'Tumblr')
 ContactType.create(name: 'Whatsapp')
 ContactType.create(name: 'viper')	
 first_admin = User.create!(firstname: 'first', lastname: 'admin', gender: Gender.first)
-Account.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password', user: first_admin ) if Rails.env.development?
+Account.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password', is_admin: true, user: first_admin ) if Rails.env.development?
