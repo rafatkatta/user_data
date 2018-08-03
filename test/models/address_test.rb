@@ -2,7 +2,7 @@ require 'test_helper'
 
 class AddressTest < ActiveSupport::TestCase
   def setup 
-    @address = create(:address, user: create(:user), data_type: create(:data_type))
+    @address = create(:address, user: create(:user, account: create(:account) ), data_type: create(:data_type))
   end
   
   def test_address_valid

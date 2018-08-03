@@ -1,6 +1,15 @@
 ActiveAdmin.register Account do
   permit_params :email, :is_admin, :password, :password_confirmation
-  scope_to :current_user, unless: proc{ current_account.is_admin? }
+
+  controller do
+    def scoped_collection
+      if current_account.is_admin?
+        super.all
+      else
+        super.where(id: current_account.id)
+      end
+    end
+  end
 
   index do
     selectable_column

@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     has_many :addresses
     has_many :contacts
-    has_one :account
+    belongs_to :account
     belongs_to :gender
     belongs_to :title, optional: true
     

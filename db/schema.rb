@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20180311123906) do
   create_table "accounts", force: :cascade do |t|
     t.string "email"
     t.string "encrypted_password"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "reset_password_token"
@@ -29,21 +28,6 @@ ActiveRecord::Schema.define(version: 20180311123906) do
     t.boolean "is_admin", default: false
     t.index ["email"], name: "index_accounts_on_email", unique: true
     t.index ["reset_password_token"], name: "index_accounts_on_reset_password_token", unique: true
-    t.index ["user_id"], name: "index_accounts_on_user_id"
-  end
-
-  create_table "active_admin_comments", force: :cascade do |t|
-    t.string "namespace"
-    t.text "body"
-    t.string "resource_type"
-    t.integer "resource_id"
-    t.string "author_type"
-    t.integer "author_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
-    t.index ["namespace"], name: "index_active_admin_comments_on_namespace"
-    t.index ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id"
   end
 
   create_table "addresses", force: :cascade do |t|
@@ -66,7 +50,7 @@ ActiveRecord::Schema.define(version: 20180311123906) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "active", default: true
-    t.boolean "validation", default: true
+    t.boolean "validation", default: false
     t.string "validation_regxp"
   end
 
@@ -108,10 +92,12 @@ ActiveRecord::Schema.define(version: 20180311123906) do
     t.string "birth_country"
     t.string "identity_card_id"
     t.string "tax_id"
+    t.integer "account_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "gender_id"
     t.integer "title_id"
+    t.index ["account_id"], name: "index_users_on_account_id"
     t.index ["gender_id"], name: "index_users_on_gender_id"
     t.index ["title_id"], name: "index_users_on_title_id"
   end
